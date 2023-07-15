@@ -1,0 +1,16 @@
+{
+  "name": "gif-to-svg",
+  "version": "0.1.0",
+  "description": "Convert a Gif into an animated SVG",
+  "main": "gif-to-svg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "gif-extract-frames": "^1.0.2",
+    "image-data-uri": "^2.0.1",
+    "image-size": "^1.0.2"
+  }
+}
