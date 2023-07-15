@@ -1,5 +1,5 @@
 # gif-to-svg
-Convert a gif into a animated svg
+Convert a gif to an animated svg
 
 ## Run
 
