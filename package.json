@@ -1,12 +1,16 @@
 {
   "name": "gif-to-svg",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Convert a Gif into an animated SVG",
   "main": "gif-to-svg.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maelswarm/gif-to-svg.git"
+  },
+  "author": "roecrew",
   "license": "MIT",
   "dependencies": {
     "gif-extract-frames": "^1.0.2",
