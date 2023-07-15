@@ -42,20 +42,28 @@ extractFrames({
         for(let i =0; i<files.length; ++i) {
             const dim = sizeOf(path.join(__dirname, 'frames/' + files[i]));
             const dataURI = await imageDataURI.encodeFromFile(path.join(__dirname, 'frames/' + files[i]));
+            const svgImageAllStyle = `image#img${i},`;
             const svgImageStyle = `
                 image#img${i} {
-                  animation: anim ${(rate * files.length).toFixed(2)}s linear infinite;
                   animation-delay: ${(i * rate).toFixed(2)}s;
                 }
                 `;
             const svgImageTag = `<image width="${dim.width}" height="${dim.height}" id="img${i}" xlink:href="${dataURI}" />`;
-            pngs.push({ svgImageStyle, svgImageTag });
+            pngs.push({ svgImageStyle, svgImageTag, svgImageAllStyle });
         }
-    
+
+        pngs.forEach(p => {
+            svg += p.svgImageAllStyle;
+        });
+        svg = svg.slice(0, svg.length - 1);
+        svg += ` {
+            animation: anim ${(rate * files.length).toFixed(2)}s linear infinite;
+        }
+        `;
+        svg += "\n";
         pngs.forEach(p => {
             svg += p.svgImageStyle;
         });
-    
         svg += '</style>';
         pngs.forEach(p => {
             svg += p.svgImageTag;

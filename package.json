@@ -1,6 +1,6 @@
 {
   "name": "gif-to-svg",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Convert a Gif into an animated SVG",
   "main": "gif-to-svg.js",
   "scripts": {
