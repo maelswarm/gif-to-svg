@@ -41,7 +41,6 @@ extractFrames({
         files = files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
         for(let i =0; i<files.length; ++i) {
             const dim = sizeOf(path.join(__dirname, 'frames/' + files[i]));
-            console.log(files[i])
             const dataURI = await imageDataURI.encodeFromFile(path.join(__dirname, 'frames/' + files[i]));
             const svgImageStyle = `
                 image#img${i} {
